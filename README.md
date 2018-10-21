@@ -6,24 +6,24 @@
 
 
 
-分类|指令
+分类 | 指令
 ---|:--|---
-基于基础镜像|FROM
-维护者信息|MAINTAINER
-镜像操作指令|RUN、COPY、ADD、EXPOSE、ENV、WORKDIR
-容器启动时执行指令|CMD、ENTRYPOINT、VOLUME
+基于基础镜像 | FROM
+维护者信息 | MAINTAINER
+镜像操作指令 | RUN、COPY、ADD、EXPOSE、ENV、WORKDIR
+容器启动时执行指令 | CMD、ENTRYPOINT、VOLUME
 
-指令|说明
+指令 | 说明
 ---|:--|---
-FROM|基于哪一个基础镜像来构建，FROM指令必须为第一行
-MAINTAINER|作者信息，Dockerfile维护者信息
-RUN|执行shell命令，当命令过长可以使用 \ 换行，使用方式跟linux的shell一样
-COPY|从宿主机复制文件到容器
-ADD|从宿主机复制文件到容器，和COPY指令差不多，但是会自动处理，例如 tar 包会自动解压，URL会自动下载
-EXPOSE|容器对外开放的端口，启动容器的时候使用 -P 不需要 -p 80:80了
-ENV|配置环境变量，由于容器在结束之后会释放掉因此不能写到/etc/profile或者 ~/.bashrc 中，通过ENV可以解决这类问题
-WORKDIR|设置登录容器的默认目录，一个落脚点
-VOLUME|容器挂载点，用于跟外部宿主机或者其他容器交互数据
+FROM | 基于哪一个基础镜像来构建，FROM指令必须为第一行
+MAINTAINER | 作者信息，Dockerfile维护者信息
+RUN | 执行shell命令，当命令过长可以使用 \ 换行，使用方式跟linux的shell一样
+COPY | 从宿主机复制文件到容器
+ADD | 从宿主机复制文件到容器，和COPY指令差不多，但是会自动处理，例如 tar 包会自动解压，URL会自动下载
+EXPOSE | 容器对外开放的端口，启动容器的时候使用 -P 不需要 -p 80:80了
+ENV | 配置环境变量，由于容器在结束之后会释放掉因此不能写到/etc/profile或者 ~/.bashrc 中，通过ENV可以解决这类问题
+WORKDIR | 设置登录容器的默认目录，一个落脚点
+VOLUME | 容器挂载点，用于跟外部宿主机或者其他容器交互数据
 
 
 
