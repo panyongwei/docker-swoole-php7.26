@@ -6,15 +6,16 @@
 
 
 
+
 分类 | 指令
----|:--|---
+------------ | -------------
 基于基础镜像 | FROM
 维护者信息 | MAINTAINER
 镜像操作指令 | RUN、COPY、ADD、EXPOSE、ENV、WORKDIR
 容器启动时执行指令 | CMD、ENTRYPOINT、VOLUME
 
 指令 | 说明
----|:--|---
+------------ | -------------
 FROM | 基于哪一个基础镜像来构建，FROM指令必须为第一行
 MAINTAINER | 作者信息，Dockerfile维护者信息
 RUN | 执行shell命令，当命令过长可以使用 \ 换行，使用方式跟linux的shell一样
